@@ -1,0 +1,8 @@
+name = Ding Latto Frontend 
+description = Setting and layouts for Latto theme
+package = "Ding!"
+php = 5.2
+core = 7.x
+dependencies[] = panels
+dependencies[] = panels_everywhere
+files[] = ding_latto_frontend.module

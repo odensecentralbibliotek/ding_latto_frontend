@@ -1,0 +1,32 @@
+<?php
+/**
+ * @file  ding_latto_frontend.module
+ *
+ * @brief A module providing latto specific layouts for panels and various settings.
+ *
+ */
+
+/**
+ * Implements hook_ctools_plugin_directory().
+ *
+ * It simply tells panels where to find the .inc files that define various
+ * args, contexts, content_types. In this case the subdirectories of
+ * ctools_plugin_example/panels are used.
+ */
+function ding_latto_frontend_ctools_plugin_directory($owner, $plugin_type) {
+  if ($owner == 'panels' && $plugin_type == 'layouts') {
+    return "plugins/$plugin_type";
+  }
+}
+
+/**
+ * Implement hook_ctools_plugin_api().
+ *
+ * CTools will pick up default panels pages in
+ * ding_latto_frontend.pages_default.inc
+ */
+function ding_latto_frontend_ctools_plugin_api($module, $api) {
+  if ($module == 'page_manager' && $api == 'pages_default') {
+    return array('version' => 1);
+  }
+}
