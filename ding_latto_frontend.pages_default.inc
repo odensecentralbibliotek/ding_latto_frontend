@@ -92,11 +92,14 @@ function ding_latto_frontend_default_page_manager_handlers() {
   $pane = new stdClass();
   $pane->pid = 'new-3';
   $pane->panel = 'content';
-  $pane->type = 'page_breadcrumb';
-  $pane->subtype = 'page_breadcrumb';
+  $pane->type = 'block';
+  $pane->subtype = 'search-form';
   $pane->shown = TRUE;
   $pane->access = array();
-  $pane->configuration = array();
+  $pane->configuration = array(
+    'override_title' => 1,
+    'override_title_text' => '',
+  );
   $pane->cache = array();
   $pane->style = array(
     'settings' => NULL,
@@ -104,14 +107,14 @@ function ding_latto_frontend_default_page_manager_handlers() {
   $pane->css = array();
   $pane->extras = array();
   $pane->position = 1;
-  $pane->locks = '';
+  $pane->locks = array();
   $display->content['new-3'] = $pane;
   $display->panels['content'][1] = 'new-3';
   $pane = new stdClass();
   $pane->pid = 'new-4';
   $pane->panel = 'content';
-  $pane->type = 'page_messages';
-  $pane->subtype = 'page_messages';
+  $pane->type = 'page_breadcrumb';
+  $pane->subtype = 'page_breadcrumb';
   $pane->shown = TRUE;
   $pane->access = array();
   $pane->configuration = array();
@@ -128,16 +131,11 @@ function ding_latto_frontend_default_page_manager_handlers() {
   $pane = new stdClass();
   $pane->pid = 'new-5';
   $pane->panel = 'content';
-  $pane->type = 'page_tabs';
-  $pane->subtype = 'page_tabs';
+  $pane->type = 'page_messages';
+  $pane->subtype = 'page_messages';
   $pane->shown = TRUE;
   $pane->access = array();
-  $pane->configuration = array(
-    'type' => 'both',
-    'id' => 'tabs',
-    'override_title' => 0,
-    'override_title_text' => '',
-  );
+  $pane->configuration = array();
   $pane->cache = array();
   $pane->style = array(
     'settings' => NULL,
@@ -145,7 +143,7 @@ function ding_latto_frontend_default_page_manager_handlers() {
   $pane->css = array();
   $pane->extras = array();
   $pane->position = 3;
-  $pane->locks = array();
+  $pane->locks = '';
   $display->content['new-5'] = $pane;
   $display->panels['content'][3] = 'new-5';
   $pane = new stdClass();
@@ -272,30 +270,10 @@ function ding_latto_frontend_default_page_manager_handlers() {
   $pane->locks = '';
   $display->content['new-11'] = $pane;
   $display->panels['header'][0] = 'new-11';
-  $pane = new stdClass();
-  $pane->pid = 'new-12';
-  $pane->panel = 'header';
-  $pane->type = 'block';
-  $pane->subtype = 'search-form';
-  $pane->shown = TRUE;
-  $pane->access = array();
-  $pane->configuration = array(
-    'override_title' => 1,
-    'override_title_text' => '',
-  );
-  $pane->cache = array();
-  $pane->style = array(
-    'settings' => NULL,
-  );
-  $pane->css = array();
-  $pane->extras = array();
-  $pane->position = 1;
-  $pane->locks = array();
-  $display->content['new-12'] = $pane;
-  $display->panels['header'][1] = 'new-12';
   $display->hide_title = PANELS_TITLE_NONE;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
+
 
   $handlers[$handler->name] = $handler;
   return $handlers;
