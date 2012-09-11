@@ -10,7 +10,7 @@
  */
 ?>
 <div <?php if (!empty($css_id)) { print " id=\"$css_id\""; } ?> class="grid-row grid-content">
-  <div class="grid-8-left">
+  <div class="grid-8-center">
     <div class="grid-inner"><?php print $content['grid_8_left']; ?></div>
   </div>
   <aside class="grid-4-left">
