@@ -10,13 +10,13 @@
  */
 ?>
 <div <?php if (!empty($css_id)) { print " id=\"$css_id\""; } ?> class="grid-row grid-content">
-  <div class="grid-10-center">
-    <div class="grid-inner"><?php print $content['grid_10_center']; ?></div>
+  <div class="grid-8-left">
+    <div class="grid-inner"><?php print $content['grid_8_left']; ?></div>
   </div>
-  <aside class="grid-3-left">
-    <div class="grid-inner"><?php print $content['grid_3_left']; ?></div>
+  <aside class="grid-4-left">
+    <div class="grid-inner"><?php print $content['grid_4_left']; ?></div>
   </aside>
-  <aside class="grid-3-right">
-    <div class="grid-inner"><?php print $content['grid_3_right']; ?></div>
+  <aside class="grid-4-right">
+    <div class="grid-inner"><?php print $content['grid_4_right']; ?></div>
   </aside>
 </div>
