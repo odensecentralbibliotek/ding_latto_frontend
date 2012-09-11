@@ -92,6 +92,24 @@ function ding_latto_frontend_default_page_manager_handlers() {
   $pane = new stdClass();
   $pane->pid = 'new-3';
   $pane->panel = 'content';
+  $pane->type = 'page_breadcrumb';
+  $pane->subtype = 'page_breadcrumb';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array();
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 1;
+  $pane->locks = '';
+  $display->content['new-3'] = $pane;
+  $display->panels['content'][1] = 'new-3';
+  $pane = new stdClass();
+  $pane->pid = 'new-4';
+  $pane->panel = 'content';
   $pane->type = 'block';
   $pane->subtype = 'search-form';
   $pane->shown = TRUE;
@@ -106,26 +124,8 @@ function ding_latto_frontend_default_page_manager_handlers() {
   );
   $pane->css = array();
   $pane->extras = array();
-  $pane->position = 1;
-  $pane->locks = array();
-  $display->content['new-3'] = $pane;
-  $display->panels['content'][1] = 'new-3';
-  $pane = new stdClass();
-  $pane->pid = 'new-4';
-  $pane->panel = 'content';
-  $pane->type = 'page_breadcrumb';
-  $pane->subtype = 'page_breadcrumb';
-  $pane->shown = TRUE;
-  $pane->access = array();
-  $pane->configuration = array();
-  $pane->cache = array();
-  $pane->style = array(
-    'settings' => NULL,
-  );
-  $pane->css = array();
-  $pane->extras = array();
   $pane->position = 2;
-  $pane->locks = '';
+  $pane->locks = array();
   $display->content['new-4'] = $pane;
   $display->panels['content'][2] = 'new-4';
   $pane = new stdClass();
@@ -170,6 +170,24 @@ function ding_latto_frontend_default_page_manager_handlers() {
   $display->panels['content'][4] = 'new-6';
   $pane = new stdClass();
   $pane->pid = 'new-7';
+  $pane->panel = 'content';
+  $pane->type = 'page_breadcrumb';
+  $pane->subtype = 'page_breadcrumb';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array();
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 5;
+  $pane->locks = array();
+  $display->content['new-7'] = $pane;
+  $display->panels['content'][5] = 'new-7';
+  $pane = new stdClass();
+  $pane->pid = 'new-8';
   $pane->panel = 'footer';
   $pane->type = 'block';
   $pane->subtype = 'menu-menu-footer-menu-1';
@@ -187,10 +205,10 @@ function ding_latto_frontend_default_page_manager_handlers() {
   $pane->extras = array();
   $pane->position = 0;
   $pane->locks = '';
-  $display->content['new-7'] = $pane;
-  $display->panels['footer'][0] = 'new-7';
+  $display->content['new-8'] = $pane;
+  $display->panels['footer'][0] = 'new-8';
   $pane = new stdClass();
-  $pane->pid = 'new-8';
+  $pane->pid = 'new-9';
   $pane->panel = 'footer';
   $pane->type = 'block';
   $pane->subtype = 'menu-menu-footer-menu-2';
@@ -208,10 +226,10 @@ function ding_latto_frontend_default_page_manager_handlers() {
   $pane->extras = array();
   $pane->position = 1;
   $pane->locks = '';
-  $display->content['new-8'] = $pane;
-  $display->panels['footer'][1] = 'new-8';
+  $display->content['new-9'] = $pane;
+  $display->panels['footer'][1] = 'new-9';
   $pane = new stdClass();
-  $pane->pid = 'new-9';
+  $pane->pid = 'new-10';
   $pane->panel = 'footer';
   $pane->type = 'block';
   $pane->subtype = 'menu-menu-footer-menu-3';
@@ -229,10 +247,10 @@ function ding_latto_frontend_default_page_manager_handlers() {
   $pane->extras = array();
   $pane->position = 2;
   $pane->locks = '';
-  $display->content['new-9'] = $pane;
-  $display->panels['footer'][2] = 'new-9';
+  $display->content['new-10'] = $pane;
+  $display->panels['footer'][2] = 'new-10';
   $pane = new stdClass();
-  $pane->pid = 'new-10';
+  $pane->pid = 'new-11';
   $pane->panel = 'footer';
   $pane->type = 'block';
   $pane->subtype = 'menu-menu-footer-menu-4';
@@ -250,10 +268,10 @@ function ding_latto_frontend_default_page_manager_handlers() {
   $pane->extras = array();
   $pane->position = 3;
   $pane->locks = '';
-  $display->content['new-10'] = $pane;
-  $display->panels['footer'][3] = 'new-10';
+  $display->content['new-11'] = $pane;
+  $display->panels['footer'][3] = 'new-11';
   $pane = new stdClass();
-  $pane->pid = 'new-11';
+  $pane->pid = 'new-12';
   $pane->panel = 'header';
   $pane->type = 'pane_header';
   $pane->subtype = 'pane_header';
@@ -268,12 +286,11 @@ function ding_latto_frontend_default_page_manager_handlers() {
   $pane->extras = array();
   $pane->position = 0;
   $pane->locks = '';
-  $display->content['new-11'] = $pane;
-  $display->panels['header'][0] = 'new-11';
+  $display->content['new-12'] = $pane;
+  $display->panels['header'][0] = 'new-12';
   $display->hide_title = PANELS_TITLE_NONE;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
-
 
   $handlers[$handler->name] = $handler;
   return $handlers;
