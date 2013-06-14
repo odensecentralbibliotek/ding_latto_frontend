@@ -3,6 +3,8 @@
  * Implementation of hook_default_page_manager_handlers()
  */
 function ding_latto_frontend_default_page_manager_handlers() {
+  $export = array();
+
   $handler = new stdClass();
   $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
   $handler->api_version = 1;
@@ -291,7 +293,7 @@ function ding_latto_frontend_default_page_manager_handlers() {
   $display->hide_title = PANELS_TITLE_NONE;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
+  $export['site_template_panel_context'] = $handler;
 
-  $handlers[$handler->name] = $handler;
-  return $handlers;
+  return $export;
 }
